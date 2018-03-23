@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: NotificationLibrary
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: samra
+Implementation-Vendor-Id: com.target
+Build-Jdk: 1.8.0_152
+Implementation-URL: http://projects.spring.io/spring-boot/EntityManage
+ r/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
