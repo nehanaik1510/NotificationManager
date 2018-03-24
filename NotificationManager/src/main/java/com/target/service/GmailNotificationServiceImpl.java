@@ -46,7 +46,7 @@ public class GmailNotificationServiceImpl implements GmailNotificationService{
 	@Override
 	public String pushNotification(String id, Notification t) {
 		GmailNotification temp=(GmailNotification)t;
-		return sendMail("smtp.gmail.com","587","rsamrat073",id,temp.getFrom(),"Samrat Roy",temp.getTo(),temp.getSubject(),temp.getMessage());
+		return sendMail("smtp.gmail.com","587","rsamrat073","K1t1dRUiBuQZ9nkWYyn6eQkL",temp.getFrom(),"rsamrat073",temp.getTo(),temp.getSubject(),temp.getMessage());
 	}
 
 	

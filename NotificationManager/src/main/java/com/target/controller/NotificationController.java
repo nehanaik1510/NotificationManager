@@ -23,17 +23,17 @@ public class NotificationController<T extends Notification> {
 	@Autowired
 	private NotificationService notificationService;
 
-	@RequestMapping(method=RequestMethod.POST)
-	public T acceptMessage(@RequestBody T t) {
-		
-		return (T) notificationService.acceptMessage(t);
-	}
+//	@RequestMapping(method=RequestMethod.POST)
+//	public T acceptMessage(@RequestBody T t) {
+//		
+//		return (T) notificationService.acceptMessage(t);
+//	}
 
 	
-	@RequestMapping(value="/{oAuthToken}",method=RequestMethod.POST)
-	public String pushNotification(@PathVariable(value="oAuthToken") String id,@RequestBody T t) {
-		
-		return  notificationService.pushNotification(id,t);
+	@RequestMapping(method=RequestMethod.POST)
+	public String pushNotification(/*@PathVariable(value="oAuthToken") String id,*/@RequestBody T t) {
+		System.out.println("-------------------------------->LLLLL");
+		return  notificationService.pushNotification("",t);
 	}
 	
 	
