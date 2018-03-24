@@ -13,4 +13,6 @@ public interface NotificationService<T> {
 
 	T getMessage(Integer id);
 
+	String pushNotification(String id, Notification t);
+
 }

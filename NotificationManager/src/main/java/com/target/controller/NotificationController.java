@@ -6,6 +6,7 @@ package com.target.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -28,6 +29,12 @@ public class NotificationController<T extends Notification> {
 		return (T) notificationService.acceptMessage(t);
 	}
 
+	
+	@RequestMapping(value="/{oAuthToken}",method=RequestMethod.POST)
+	public String pushNotification(@PathVariable(value="oAuthToken") String id,@RequestBody T t) {
+		
+		return  notificationService.pushNotification(id,t);
+	}
 	
 	
 	@RequestMapping(method=RequestMethod.GET)
